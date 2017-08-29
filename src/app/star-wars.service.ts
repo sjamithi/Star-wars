@@ -32,4 +32,15 @@ onSideChosen(charInfo) {
     this.logService.writeLog('Changed side of ' + charInfo.name + ', new Side:' + charInfo.side);
   }
 
+  addCharacter(name, side) {
+      const pos = this.characters.findIndex(char => {
+          return char.name === name;
+      })
+      if(pos !== -1) {
+          return;
+      }
+      const char = {name:name, side: side};
+      this.characters.push(char);
+  }
+
 }
