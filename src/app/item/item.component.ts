@@ -13,7 +13,7 @@ export class ItemComponent implements OnInit {
   constructor(swService: StarWarsService) {
     this.swService = swService;
    }
-
+   
   ngOnInit() {
   }
 
